@@ -5,22 +5,50 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Termini di utilizzo — White Noise: Relax &amp; Sleep</title>
 <style>
-  :root { color-scheme: light dark; }
+  :root { color-scheme: dark; }
+  html { background: #0B0B1A; }
   body {
-    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    max-width: 760px; margin: 0 auto; padding: 32px 20px 80px; color: #1a1a1a; background: #fff;
+    font: 16px/1.7 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    max-width: 760px; margin: 0 auto; padding: 40px 20px 90px;
+    color: #ECECF5; background: transparent; position: relative;
   }
-  @media (prefers-color-scheme: dark) { body { color: #e6e6e6; background: #131313; } a { color: #7db2ff; } }
-  h1 { font-size: 1.7rem; margin: 0 0 4px; }
-  h2 { font-size: 1.2rem; margin: 2.2rem 0 .6rem; }
-  h3 { font-size: 1rem; margin: 1.4rem 0 .3rem; }
-  .meta { color: #777; font-size: .9rem; margin-bottom: 2rem; }
+  /* sfondo notte stellato come nell'app: sfumatura + stelle fisse dietro al testo */
+  body::before {
+    content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none;
+    background:
+      radial-gradient(1.3px 1.3px at 40px 60px, rgba(255,255,255,.85), transparent 70%),
+      radial-gradient(1px 1px at 180px 120px, rgba(255,255,255,.6), transparent 70%),
+      radial-gradient(1.6px 1.6px at 260px 240px, rgba(255,255,255,.8), transparent 70%),
+      radial-gradient(1px 1px at 100px 220px, rgba(255,255,255,.5), transparent 70%),
+      radial-gradient(1.2px 1.2px at 310px 40px, rgba(244,217,123,.7), transparent 70%),
+      radial-gradient(1px 1px at 90px 140px, rgba(255,255,255,.55), transparent 70%),
+      radial-gradient(1.4px 1.4px at 30px 90px, rgba(255,255,255,.9), transparent 70%),
+      radial-gradient(1px 1px at 150px 30px, rgba(255,255,255,.7), transparent 70%),
+      radial-gradient(1.8px 1.8px at 120px 110px, rgba(255,255,255,.95), transparent 70%),
+      radial-gradient(1px 1px at 60px 20px, rgba(255,255,255,.6), transparent 70%),
+      radial-gradient(1.2px 1.2px at 170px 160px, rgba(143,183,255,.8), transparent 70%),
+      linear-gradient(180deg, #151033 0%, #0B0B1A 70%);
+    background-size: 320px 280px, 320px 280px, 320px 280px, 320px 280px, 320px 280px, 190px 170px,
+      150px 130px, 210px 190px, 260px 230px, 120px 110px, 230px 200px, auto;
+  }
+  h1, h2, h3 { font-family: "Fraunces", Georgia, "Times New Roman", serif; }
+  h1 {
+    font-size: 2rem; font-weight: 600; margin: 0 0 6px; color: #F4D97B;
+    text-shadow: 0 0 22px rgba(244,217,123,.45);
+  }
+  h2 { font-size: 1.35rem; font-weight: 600; margin: 2.2rem 0 .6rem; color: #F4D97B; }
+  h3 { font-size: 1.05rem; font-weight: 500; margin: 1.5rem 0 .3rem; color: #ECECF5; }
+  .meta { color: #A8ADCB; font-size: .9rem; margin-bottom: 2rem; }
   .lang, .nav { margin: 1.5rem 0; font-size: .95rem; }
+  a { color: #8FB7FF; }
   ul { padding-left: 1.3rem; }
   li { margin: .3rem 0; }
-  hr { border: none; border-top: 1px solid #ccc4; margin: 3rem 0; }
-  code { background: #8881; padding: 1px 5px; border-radius: 4px; font-size: .9em; }
+  hr { border: none; border-top: 1px solid rgba(236,236,245,.14); margin: 3rem 0; }
+  code { background: rgba(236,236,245,.09); padding: 1px 5px; border-radius: 4px; font-size: .9em; color: #ECECF5; }
 </style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap">
 </head>
 <body>
 
