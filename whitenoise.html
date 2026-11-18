@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>White Noise: Relax &amp; Sleep</title>
+<meta name="description" content="Scarica White Noise: Relax & Sleep su Google Play">
+<style>
+  html, body { margin: 0; height: 100%; }
+  body {
+    background: linear-gradient(#0c0a22, #1e1842);
+    color: #fff; font-family: system-ui, -apple-system, Roboto, sans-serif;
+    display: flex; align-items: center; justify-content: center; text-align: center;
+  }
+  .box { padding: 24px; max-width: 420px; }
+  h1 { font-family: Georgia, serif; color: #f0d6a0; font-size: 28px; margin: 0 0 8px; }
+  p { color: #c9cce0; margin: 0 0 28px; }
+  a.btn {
+    display: inline-block; background: #f0d6a0; color: #14112b; text-decoration: none;
+    font-weight: 700; padding: 16px 28px; border-radius: 999px; font-size: 18px;
+  }
+</style>
+</head>
+<body>
+<div class="box">
+  <h1>White Noise: Relax &amp; Sleep</h1>
+  <p>Apertura di Google Play in corso…</p>
+  <a class="btn" id="go" href="https://play.google.com/store/apps/details?id=com.alexanderstones.rumoribianchi">Apri su Google Play</a>
+</div>
+<script>
+  var pkg = "com.alexanderstones.rumoribianchi";
+  var web = "https://play.google.com/store/apps/details?id=" + pkg;
+  if (/android/i.test(navigator.userAgent)) {
+    window.location.href = "intent://details?id=" + pkg +
+      "#Intent;scheme=market;package=com.android.vending;S.browser_fallback_url=" +
+      encodeURIComponent(web) + ";end";
+  } else {
+    window.location.href = web;
+  }
+</script>
+</body>
+</html>
